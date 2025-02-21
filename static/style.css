@@ -12,11 +12,11 @@ body {
     border-radius: 10px;
 }
 footer {
-    position: absolute;
+    position: fixed;
     bottom: 0;
     width: 100%;
     color: tomato;
     text-align: center;
     padding: 5px;
-    background: rgba(220, 220, 220, 0.2); /* Opcional, adiciona um fundo sutil */
+    background: rgba(255, 0, 0, 0.2); /* Opcional, adiciona um fundo sutil */
 }
