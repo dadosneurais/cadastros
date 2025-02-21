@@ -17,6 +17,7 @@
             <input type="text" name="name" class="form-control" placeholder="Nome" required>
             <input type="text" name="rg" class="form-control" placeholder="RG">
             <input type="text" name="cpf" class="form-control" placeholder="CPF">
+            <input type="text" name="tel" class="form-control" placeholder="Telefone">
             <input type="text" name="address" class="form-control" placeholder="Endereço">
             <div class="col-12">
                 <button type="submit" class="btn btn-info">Adicionar</button>
@@ -34,7 +35,7 @@
             <h5>Resultados da Busca:</h5>
             <ul class="list-group">
                 {% for client in search_results %}
-                <li class="list-group-item">{{ client.name }} - RG: {{ client.rg }} - CPF: {{ client.cpf }}</li>
+                <li class="list-group-item">{{ client.name }} - RG: {{ client.rg }} - CPF: {{ client.cpf }} - TEL: {{ client.tel }}</li>
                 {% endfor %}
             </ul>
         </div>
@@ -49,6 +50,7 @@
                         <th>Nome</th>
                         <th>RG</th>
                         <th>CPF</th>
+                        <th>TEL</th>
                         <th>Endereço</th>
                         <th>Ações</th>
                     </tr>
@@ -60,6 +62,7 @@
                         <td>{{ client.name }}</td>
                         <td>{{ client.rg }}</td>
                         <td>{{ client.cpf }}</td>
+                        <td>{{ client.tel }}</td>
                         <td>{{ client.address }}</td>
                         <td><a href="#" onclick="confirmDelete('{{ client._id }}')" class="btn btn-danger btn-sm">Deletar</a></td>
                     </tr>
