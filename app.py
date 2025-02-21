@@ -49,8 +49,9 @@ def add():
     name = request.form['name']
     rg = request.form['rg']
     cpf = request.form['cpf']
+    tel = request.form['tel']
     address = request.form['address']
-    collection.insert_one({"name": name, "rg": rg, "cpf": cpf, "address": address})
+    collection.insert_one({"name": name, "rg": rg, "cpf": cpf, "tel": tel , "address": address})
     return redirect(url_for('index'))
 
 @app.route('/search', methods=['POST'])
